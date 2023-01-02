@@ -1,0 +1,258 @@
+components:
+  hhhh:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 4
+      2:
+        length: 4
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hhhp:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 4
+      2:
+        length: 4
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hhph:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 4
+      2:
+        length: 36
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hhpp:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 4
+      2:
+        length: 36
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hphh:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 36
+      2:
+        length: 4
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hphp:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 36
+      2:
+        length: 4
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hpph:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 36
+      2:
+        length: 36
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  hppp:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 36
+      2:
+        length: 36
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  phhh:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 4
+      2:
+        length: 4
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  phhp:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 4
+      2:
+        length: 4
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  phph:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 4
+      2:
+        length: 36
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  phpp:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 4
+      2:
+        length: 36
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  pphh:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 36
+      2:
+        length: 4
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  pphp:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 36
+      2:
+        length: 4
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  ppph:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 36
+      2:
+        length: 36
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+  pppp:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 36
+      2:
+        length: 36
+      3:
+        length: 36
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 1
+    version: 100
+type: TensorSet
