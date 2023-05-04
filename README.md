@@ -18,3 +18,9 @@ srun $exe --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 --ei $ei --
 Executed in a directory where the provided files are located. \
 The correct energy for this calculation is \
 -0.005239608018571
+
+
+System taken from: \
+https://github.com/cc4s/test-resources/tree/master/h2o/dz \
+which is used here \
+https://github.com/cc4s/cc4s/tree/master/test/tests/h2o/dz
