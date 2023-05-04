@@ -1,0 +1,34 @@
+components:
+  hphh:
+    dimensions:
+      0:
+        length: 4
+      1:
+        length: 36
+      2:
+        length: 4
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: -0.0059931521882277206
+    version: 100
+  ppph:
+    dimensions:
+      0:
+        length: 36
+      1:
+        length: 36
+      2:
+        length: 36
+      3:
+        length: 4
+    elements:
+      type: IeeeBinaryFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.003403498822389146
+    version: 100
+type: TensorSet
