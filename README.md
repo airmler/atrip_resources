@@ -22,6 +22,16 @@ The correct (T) energy for this calculation is \
 The correct (cT) energy for this calculation is \
 -0.0048452100
 
+which can be obtained with atrip (commit: c6d8056be) in the following way:
+
+Jppph="atrip_resources/ctIntermediate.components.ppph.elements"
+Jhphh="atrip_resources/ctIntermediate.components.hphh.elements"
+
+mpirun -np 4 ../atrip --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 \\
+       --ei $ei --ea $ea --Tpphh $tabij --Tph $tai --Vpphh $Vpphh --Vhhhp $Vhhhp --Vppph $Vppph \\
+       --Jppph $Jppph --Jhphh $Jhphh --cT
+
+
 System taken from: \
 https://github.com/cc4s/test-resources/tree/master/h2o/dz \
 which is used here \
