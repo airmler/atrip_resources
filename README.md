@@ -16,9 +16,11 @@ srun $exe --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 --ei $ei --
           --Tpphh $tabij --Tph $tai --Vpphh $pphh --Vhhhp $hhhp --Vppph $ppph 
 
 Executed in a directory where the provided files are located. \
-The correct energy for this calculation is \
+The correct (T) energy for this calculation is \
 -0.005239608018571
 
+The correct (cT) energy for this calculation is \
+-0.0048452100
 
 System taken from: \
 https://github.com/cc4s/test-resources/tree/master/h2o/dz \
