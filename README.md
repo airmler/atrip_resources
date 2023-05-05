@@ -27,8 +27,8 @@ which can be obtained with atrip (commit: c6d8056be) in the following way:
 Jppph="atrip_resources/ctIntermediate.components.ppph.elements"
 Jhphh="atrip_resources/ctIntermediate.components.hphh.elements"
 
-mpirun -np 4 ../atrip --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 \\
-       --ei $ei --ea $ea --Tpphh $tabij --Tph $tai --Vpphh $Vpphh --Vhhhp $Vhhhp --Vppph $Vppph \\
+mpirun -np 4 ../atrip --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 \\ \
+       --ei $ei --ea $ea --Tpphh $tabij --Tph $tai --Vpphh $Vpphh --Vhhhp $Vhhhp --Vppph $Vppph \\ \
        --Jppph $Jppph --Jhphh $Jhphh --cT
 
 
