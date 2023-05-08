@@ -1,9 +1,9 @@
 # atrip_resources
 Input files to verify atrip using bench
 
-Usage: run (the correct version of) ```test_main``` the following way:
+Usage: run (the correct version of) ```bench/atrip``` the following way:
 
-exe=$ATRIP/build/bench/test_main \
+exe=$ATRIP/build/bench/atrip \
 hhhp="CoulombIntegrals.components.hhhp.elements" \
 pphh="CoulombIntegrals.components.pphh.elements" \
 ppph="CoulombIntegrals.components.ppph.elements" \
