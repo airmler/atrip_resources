@@ -12,7 +12,7 @@ ea="EigenEnergies.components.p.elements" \
 tai="Amplitudes.components.ph.elements" \
 tabij="Amplitudes.components.pphh.elements"
 
-srun $exe --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 --ei $ei --ea $ea \\ \
+srun $exe --no 4 --nv 36 --dist group --barrier --nocheckpoint -% 50 --nochrono --ei $ei --ea $ea \\ \
           --Tpphh $tabij --Tph $tai --Vpphh $pphh --Vhhhp $hhhp --Vppph $ppph 
 
 Executed in a directory where the provided files are located. \
