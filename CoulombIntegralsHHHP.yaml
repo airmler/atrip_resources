@@ -1,0 +1,15 @@
+dimensions:
+  0:
+    length: 4
+  1:
+    length: 4
+  2:
+    length: 4
+  3:
+    length: 36
+elements:
+  type: IeeeBinaryFile
+scalarType: Real64
+type: Tensor
+unit: 1
+version: 100
