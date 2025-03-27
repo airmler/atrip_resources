@@ -1,0 +1,143 @@
+- name: Read
+  in:
+    fileName: "EigenEnergies.yaml"
+  out:
+    destination: EigenEnergies
+
+- name: Read
+  in:
+    fileName: "CoulombVertex.yaml"
+  out:
+    destination: CoulombVertex
+
+- name: DefineHolesAndParticles
+  in:
+    eigenEnergies: EigenEnergies
+  out:
+    slicedEigenEnergies: EigenEnergies
+
+- name: SliceOperator
+  in:
+    slicedEigenEnergies: EigenEnergies
+    operator: CoulombVertex
+  out:
+    slicedOperator: CoulombVertex
+
+- name: VertexCoulombIntegrals
+  in:
+    slicedCoulombVertex: CoulombVertex
+  out:
+    coulombIntegrals: CoulombIntegrals
+
+- name: CoupledCluster
+  in:
+    method: Ccsd
+    slicedEigenEnergies: EigenEnergies
+    coulombIntegrals: CoulombIntegrals
+    slicedCoulombVertex: CoulombVertex
+    integralsSliceSize: 100
+    maxIterations: 20
+    energyConvergence: 1.0E-8
+    amplitudesConvergence: 1.0E-8
+    mixer:
+      type: DiisMixer
+      maxResidua: 4
+  out:
+    energy: CcsdEnergy
+    amplitudes: Amplitudes
+
+
+- name: PerturbativeCT
+  in:
+    coulombIntegrals: CoulombIntegrals
+    amplitudes: Amplitudes
+    coulombVertex: CoulombVertex
+  out:
+    cTIntermediate: Ctintermediate
+
+- name: PerturbativeTriplesReference
+  in:
+    coulombIntegrals: CoulombIntegrals
+    amplitudes: Amplitudes
+    slicedEigenEnergies: EigenEnergies
+
+
+- name: PerturbativeTriplesReference
+  in:
+    coulombIntegrals: CoulombIntegrals
+    cT: 1
+    amplitudes: Amplitudes
+    slicedEigenEnergies: EigenEnergies
+
+
+
+- name: TensorSetToTensor
+  in: {tensorSet: Amplitudes, component: "pphh"}
+  out: {tensor: AmplitudesPPHH}
+
+- name: TensorSetToTensor
+  in: {tensorSet: Amplitudes, component: "ph"}
+  out: {tensor: AmplitudesPH}
+
+- name: TensorSetToTensor
+  in: {tensorSet: CoulombIntegrals, component: "pphh"}
+  out: {tensor: CoulombIntegralsPPHH}
+
+- name: TensorSetToTensor
+  in: {tensorSet: CoulombIntegrals, component: "ppph"}
+  out: {tensor: CoulombIntegralsPPPH}
+
+- name: TensorSetToTensor
+  in: {tensorSet: CoulombIntegrals, component: "hhhp"}
+  out: {tensor: CoulombIntegralsHHHP}
+
+- name: TensorSetToTensor
+  in: {tensorSet: EigenEnergies, component: "p"}
+  out: {tensor: EigenEnergiesP}
+
+- name: TensorSetToTensor
+  in: {tensorSet: EigenEnergies, component: "h"}
+  out: {tensor: EigenEnergiesH}
+
+- name: TensorSetToTensor
+  in: {tensorSet: Ctintermediate, component: "hhhp"}
+  out: {tensor: CtintermediateHHHP}
+
+- name: TensorSetToTensor
+  in: {tensorSet: Ctintermediate, component: "ppph"}
+  out: {tensor: CtintermediatePPPH}
+
+
+- name: Write
+  in: {source: AmplitudesPPHH, fileName: "AmplitudesPPHH.yaml", rowMajor: 1}
+
+- name: Write
+  in: {source: AmplitudesPH, fileName: "AmplitudesPH.yaml"}
+
+- name: Write
+  in: {source: CoulombIntegralsPPHH, fileName: "CoulombIntegralsPPHH.yaml", rowMajor: 1}
+
+- name: Write
+  in: {source: CoulombIntegralsPPPH, fileName: "CoulombIntegralsPPPH.yaml", rowMajor: 1}
+
+- name: Write
+  in: {source: CoulombIntegralsHHHP, fileName: "CoulombIntegralsHHHP.yaml"}
+
+- name: Write
+  in: {source: EigenEnergiesP, fileName: "EigenEnergiesP.yaml"}
+
+- name: Write
+  in: {source: EigenEnergiesH, fileName: "EigenEnergiesH.yaml"}
+
+- name: Write
+  in: {source: CtintermediatePPPH, fileName: "CtintermediatePPPH.yaml", rowMajor: 1}
+
+- name: Write
+  in: {source: CtintermediateHHHP, fileName: "CtintermediateHHHP.yaml"}
+
+
+- name: PerturbativeTriples
+  in:
+    coulombIntegrals: CoulombIntegrals
+    amplitudes: Amplitudes
+    slicedEigenEnergies: EigenEnergies

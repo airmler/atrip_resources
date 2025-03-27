@@ -1,0 +1,569 @@
+executionEnvironment:
+  buildDate: Mar 18 2025 11:10:00
+  compiler: icc (ICC) 19.1.3.304 20200925
+  dryRanks: 0
+  hosts:
+    0:
+      host: n4912-005
+      ranks:
+        0: 0
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+        6: 6
+        7: 7
+  startTime: "Thu Mar 27 20:03:44 2025\n"
+  totalProcesses: 8
+  version: heads/handsOn-ct-0-g16b3fb5b
+statistics:
+  floatingPointOperations: 111513758
+  flops: 129298399.17546323
+  realtime: 0.862452735
+steps:
+  0:
+    in:
+      fileName: EigenEnergies.yaml
+    name: Read
+    out:
+      destination: 0x267d2c0
+  1:
+    in:
+      fileName: CoulombVertex.yaml
+    name: Read
+    out:
+      destination: 0x268b590
+  10:
+    in:
+      component: ph
+      tensorSet:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x26bb2d0
+  11:
+    in:
+      component: pphh
+      tensorSet:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x2682250
+  12:
+    in:
+      component: ppph
+      tensorSet:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x26829e0
+  13:
+    in:
+      component: hhhp
+      tensorSet:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x2670660
+  14:
+    in:
+      component: p
+      tensorSet:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x269eeb0
+  15:
+    in:
+      component: h
+      tensorSet:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x269e9f0
+  16:
+    in:
+      component: hhhp
+      tensorSet:
+        field: Real<>
+        pointer: 0x27144b0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x2689ca0
+  17:
+    in:
+      component: ppph
+      tensorSet:
+        field: Real<>
+        pointer: 0x27144b0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x26fc1a0
+  18:
+    in:
+      binary: 1
+      fileName: AmplitudesPPHH.yaml
+      rowMajor: 1
+      source: 0x26e5cb0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+          1:
+            length: 7
+          2:
+            length: 5
+          3:
+            length: 5
+        elements:
+          rowMajor: 1
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  19:
+    in:
+      binary: 1
+      fileName: AmplitudesPH.yaml
+      rowMajor: 0
+      source: 0x26bb2d0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+          1:
+            length: 5
+        elements:
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  2:
+    in:
+      eigenEnergies: 0x267d2c0
+    name: DefineHolesAndParticles
+    out:
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  20:
+    in:
+      binary: 1
+      fileName: CoulombIntegralsPPHH.yaml
+      rowMajor: 1
+      source: 0x2682250
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+          1:
+            length: 7
+          2:
+            length: 5
+          3:
+            length: 5
+        elements:
+          rowMajor: 1
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  21:
+    in:
+      binary: 1
+      fileName: CoulombIntegralsPPPH.yaml
+      rowMajor: 1
+      source: 0x26829e0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+          1:
+            length: 7
+          2:
+            length: 7
+          3:
+            length: 5
+        elements:
+          rowMajor: 1
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  22:
+    in:
+      binary: 1
+      fileName: CoulombIntegralsHHHP.yaml
+      rowMajor: 0
+      source: 0x2670660
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 5
+          1:
+            length: 5
+          2:
+            length: 5
+          3:
+            length: 7
+        elements:
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  23:
+    in:
+      binary: 1
+      fileName: EigenEnergiesP.yaml
+      rowMajor: 0
+      source: 0x269eeb0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+        elements:
+          type: IeeeBinaryFile
+        metaData:
+          energies:
+            0: -26.28781513595019
+            1: -1.6018581899717399
+            10: 1.8792521702988401
+            11: 55.033204443629728
+            2: -0.75310079870926006
+            3: -0.64301123475491995
+            4: -0.64301123475491995
+            5: 0.21310327672019
+            6: 1.0574176479292801
+            7: 1.0574176479292801
+            8: 1.1278789389649999
+            9: 1.16324598061683
+          fermiEnergy: 0
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  24:
+    in:
+      binary: 1
+      fileName: EigenEnergiesH.yaml
+      rowMajor: 0
+      source: 0x269e9f0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 5
+        elements:
+          type: IeeeBinaryFile
+        metaData:
+          energies:
+            0: -26.28781513595019
+            1: -1.6018581899717399
+            10: 1.8792521702988401
+            11: 55.033204443629728
+            2: -0.75310079870926006
+            3: -0.64301123475491995
+            4: -0.64301123475491995
+            5: 0.21310327672019
+            6: 1.0574176479292801
+            7: 1.0574176479292801
+            8: 1.1278789389649999
+            9: 1.16324598061683
+          fermiEnergy: 0
+        scalarType: Real64
+        type: Tensor
+        unit: 1
+        version: 100
+  25:
+    in:
+      binary: 1
+      fileName: CtintermediatePPPH.yaml
+      rowMajor: 1
+      source: 0x26fc1a0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 7
+          1:
+            length: 7
+          2:
+            length: 7
+          3:
+            length: 5
+        elements:
+          rowMajor: 1
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 1.8774494541967369e-322
+        version: 100
+  26:
+    in:
+      binary: 1
+      fileName: CtintermediateHHHP.yaml
+      rowMajor: 0
+      source: 0x2689ca0
+    name: Write
+    out:
+      persitentSource:
+        dimensions:
+          0:
+            length: 5
+          1:
+            length: 5
+          2:
+            length: 5
+          3:
+            length: 7
+        elements:
+          type: IeeeBinaryFile
+        scalarType: Real64
+        type: Tensor
+        unit: 2.0076100604623216e-316
+        version: 100
+  27:
+    in:
+      amplitudes:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      checkpointAtEveryIteration: 0
+      checkpointAtPercentage: 1
+      checkpointPath: atrip-checkpoint.yaml
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      ompThreads: 1
+      printAtPercentage: 10
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      tuplesDistribution: group
+      tuplesRoundRobin: node
+      useCheckpoint: 1
+    name: PerturbativeTriples
+    out:
+      energy:
+        correlation: -0.0013084707456546723
+        t: -0.0013084707456546723
+        unit: 1
+  3:
+    in:
+      operator: 0x268b590
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: SliceOperator
+    out:
+      slicedOperator:
+        field: Complex<>
+        pointer: 0x268d960
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  4:
+    in:
+      slicedCoulombVertex:
+        field: Complex<>
+        pointer: 0x268d960
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: VertexCoulombIntegrals
+    out:
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  5:
+    in:
+      amplitudesConvergence: 1e-08
+      ccsdt-n: ""
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      distinguishable: 0
+      energyConvergence: 1e-08
+      integralsSliceSize: 100
+      levelShift: 0
+      linearized: 0
+      maxIterations: 20
+      method: Ccsd
+      mixer:
+        maxResidua: 4
+        t3Mixing: 0
+        type: DiisMixer
+      slicedCoulombVertex:
+        field: Complex<>
+        pointer: 0x268d960
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: CoupledCluster
+    out:
+      amplitudes:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      convergenceReached: 1
+      energy:
+        correlation: -0.13669572114878678
+        direct: -0.22205142295492331
+        exchange: 0.085355701806136539
+        secondOrder: -0.13422814192934557
+        singles: 0.00022485544291270287
+        unit: 1
+  6:
+    in:
+      amplitudes:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      coulombVertex:
+        field: Complex<>
+        pointer: 0x268d960
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      noRing: 0
+    name: PerturbativeCT
+    out:
+      cTIntermediate:
+        field: Real<>
+        pointer: 0x27144b0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  7:
+    in:
+      amplitudes:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      cT: 0
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      lambda: 0
+      singles: 1
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: PerturbativeTriplesReference
+    out:
+      cTIntermediate:
+        field: Real<>
+        pointer: 0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      energy:
+        correlation: -0.0013084707456546716
+        unit: 1
+  8:
+    in:
+      amplitudes:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      cT: 1
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x2699ad0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      lambda: 0
+      singles: 1
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x26633e0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: PerturbativeTriplesReference
+    out:
+      cTIntermediate:
+        field: Real<>
+        pointer: 0x26c22f0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      energy:
+        correlation: -0.0011752604354408878
+        unit: 1
+  9:
+    in:
+      component: pphh
+      tensorSet:
+        field: Real<>
+        pointer: 0x26bb090
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: TensorSetToTensor
+    out:
+      tensor: 0x26e5cb0

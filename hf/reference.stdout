@@ -1,0 +1,170 @@
+
+                __ __      
+     __________/ // / _____
+    / ___/ ___/ // /_/ ___/
+   / /__/ /__/__  __(__  ) 
+   \___/\___/  /_/ /____/  
+  Coupled Cluster for Solids
+
+version: heads/handsOn-ct-0-g16b3fb5b, date: Tue Mar 18 11:09:00 2025 +0100
+build date: Mar 18 2025 11:10:00
+compiler: icc (ICC) 19.1.3.304 20200925
+mpi: Intel(R) MPI Library for Linux* OS, Version 2019 Update 9 Build 20200923 (id: abd58e492)
+total processes: 8
+calculation started on: Thu Mar 27 20:03:44 2025
+
+Dry run finished. Estimates provided for 8 ranks.
+Memory estimate (per Rank/Total): 0.000506342 / 0.00405074 GB
+Operations estimate (per Rank/Total): 0.0200576 / 0.160461 GFLOPS
+Time estimate with assumed performance of 10 GFLOPS/core/s: 0.00200576 s (5.57155e-07 h)
+--
+step: 1, Read
+Reading from text file EigenEnergies.elements
+realtime 0.004261664 s
+--
+step: 2, Read
+Reading from binary file CoulombVertex.elements
+realtime 0.002850899 s
+--
+step: 3, DefineHolesAndParticles
+number of holes     No: 5
+number of particles Nv: 7
+number of states    Np: 12
+realtime 0.000134590 s
+--
+step: 4, SliceOperator
+Slicing CoulombVertex.elements into holes and particles.
+realtime 0.010402415 s
+--
+step: 5, VertexCoulombIntegrals
+Using real Coulomb integrals
+number of field variables NF: 88
+realtime 0.004705373 s
+--
+step: 6, CoupledCluster
+Using method Ccsd. integralsSliceSize: 100
+Using mixer DiisMixer. maxResidua: 4
+Maximum number of iterations: 20
+Unless reaching energy convergence dE: 1e-08
+and amplitudes convergence dR: 1e-08
+Iter         Energy         dE           dR         time   GF/s/core
+   1  -1.34228142e-01  -1.3423e-01   1.5716e-01      0.0    0.0
+   2  -1.33156661e-01   1.0715e-03   2.7161e-02      0.1    0.0
+   3  -1.36110478e-01  -2.9538e-03   5.8217e-03      0.0    0.0
+   4  -1.36671200e-01  -5.6072e-04   1.2733e-03      0.0    0.0
+   5  -1.36694062e-01  -2.2862e-05   2.7532e-04      0.0    0.0
+   6  -1.36698097e-01  -4.0348e-06   6.2254e-05      0.0    0.0
+   7  -1.36695237e-01   2.8600e-06   1.7174e-05      0.0    0.0
+   8  -1.36695609e-01  -3.7190e-07   3.8643e-06      0.0    0.0
+   9  -1.36695644e-01  -3.4686e-08   1.0186e-06      0.0    0.0
+  10  -1.36695712e-01  -6.7892e-08   2.4794e-07      0.0    0.0
+  11  -1.36695717e-01  -5.3325e-09   5.8412e-08      0.0    0.0
+  12  -1.36695721e-01  -3.9760e-09   1.0493e-08      0.0    0.0
+  13  -1.36695721e-01  -5.5784e-11   2.4961e-09      0.0    0.0
+
+Ccsd correlation energy:          -0.1366957211
+2nd-order correlation energy:     -0.1342281419
+realtime 0.581280933 s
+--
+step: 7, PerturbativeCT
+realtime 0.037823584 s
+--
+step: 8, PerturbativeTriplesReference
+(T) correlation energy:        -0.001308470746
+realtime 0.049422703 s
+--
+step: 9, PerturbativeTriplesReference
+(cT) correlation energy:        -0.001175260435
+CR-(T) correlation energy:      -0.001133939439
+realtime 0.081792334 s
+--
+step: 10, TensorSetToTensor
+Taking out the component pphh from tensorSet
+realtime 0.000019600 s
+--
+step: 11, TensorSetToTensor
+Taking out the component ph from tensorSet
+realtime 0.000004533 s
+--
+step: 12, TensorSetToTensor
+Taking out the component pphh from tensorSet
+realtime 0.000004363 s
+--
+step: 13, TensorSetToTensor
+Taking out the component ppph from tensorSet
+realtime 0.000004380 s
+--
+step: 14, TensorSetToTensor
+Taking out the component hhhp from tensorSet
+realtime 0.000004419 s
+--
+step: 15, TensorSetToTensor
+Taking out the component p from tensorSet
+realtime 0.000004396 s
+--
+step: 16, TensorSetToTensor
+Taking out the component h from tensorSet
+realtime 0.000004267 s
+--
+step: 17, TensorSetToTensor
+Taking out the component hhhp from tensorSet
+realtime 0.000004351 s
+--
+step: 18, TensorSetToTensor
+Taking out the component ppph from tensorSet
+realtime 0.000006213 s
+--
+step: 19, Write
+Writing to binary file AmplitudesPPHH.elements
+realtime 0.004618786 s
+--
+step: 20, Write
+Writing to binary file AmplitudesPH.elements
+realtime 0.002174429 s
+--
+step: 21, Write
+Writing to binary file CoulombIntegralsPPHH.elements
+realtime 0.006189321 s
+--
+step: 22, Write
+Writing to binary file CoulombIntegralsPPPH.elements
+realtime 0.006774013 s
+--
+step: 23, Write
+Writing to binary file CoulombIntegralsHHHP.elements
+realtime 0.006145321 s
+--
+step: 24, Write
+Writing to binary file EigenEnergiesP.elements
+realtime 0.002182792 s
+--
+step: 25, Write
+Writing to binary file EigenEnergiesH.elements
+realtime 0.001874871 s
+--
+step: 26, Write
+Writing to binary file CtintermediatePPPH.elements
+realtime 0.002792677 s
+--
+step: 27, Write
+Writing to binary file CtintermediateHHHP.elements
+realtime 0.004208420 s
+--
+step: 28, PerturbativeTriples
+Progress(%)  time(s)   GFLOP/s      
+10           0         inf          
+20           0         0.086        
+30           0         0.108        
+40           0         0.129        
+50           0         0.144        
+60           0         0.156        
+70           0         0.166        
+80           0         0.173        
+90           0         0.180        
+100          0         0.186        
+(T) correlation energy:    -0.00130847074565467
+realtime 0.005273788 s
+--
+Calculation finished successfully.
+Calculation finished at: Thu Mar 27 20:03:46 2025
+
