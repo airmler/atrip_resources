@@ -1,0 +1,15 @@
+dimensions:
+  0:
+    length: 27
+  1:
+    length: 27
+  2:
+    length: 5
+  3:
+    length: 5
+elements:
+  type: IeeeBinaryFile
+scalarType: Complex64
+type: Tensor
+unit: 1
+version: 100
